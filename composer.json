@@ -10,6 +10,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=7.2.0"
+        "php": ">=7.2.0",
+        "symfony/dotenv": "^4.2@dev"
     }
 }
