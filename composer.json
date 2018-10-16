@@ -5,7 +5,11 @@
     "authors": [
         {
             "name": "Jez Emery",
-            "email": "jez.emery@gmail.com"
+            "email": "jez@hiohzo.com"
+        },
+        {
+            "name": "Harry Wiseman",
+            "email": "enquiries@harry-wiseman.co.uk"
         }
     ],
     "minimum-stability": "dev",
@@ -19,5 +23,8 @@
         "php": ">=7.2.0",
         "symfony/dotenv": "^4.2@dev",
         "strawberrysoup/nemesis": "dev-master"
+    },
+    "require-dev": {
+      "roave/security-advisories": "dev-master"
     }
 }
