@@ -1,5 +1,6 @@
 {
     "name": "jezemery/mimir",
+    "license": "Unlicense",
     "description": "skeleton for wp dev",
     "type": "composer-plugin",
     "authors": [
