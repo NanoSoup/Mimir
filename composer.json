@@ -23,9 +23,14 @@
     "require": {
         "php": ">=7.2.0",
         "symfony/dotenv": "^4.2@dev",
-        "strawberrysoup/nemesis": "dev-master"
+        "strawberrysoup/nemesis": "dev-master",
+        "twig/twig": "2.x-dev",
+        "johnpbloch/wordpress": "dev-master"
     },
     "require-dev": {
-      "roave/security-advisories": "dev-master"
+        "roave/security-advisories": "dev-master"
+    },
+    "scripts": {
+        "post-create-project-cmd": "mv -n wordpress/* . && rm -rf wordpress"
     }
 }
