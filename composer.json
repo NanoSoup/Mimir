@@ -1,0 +1,15 @@
+{
+    "name": "jezemery/mimir",
+    "description": "skeleton for wp dev",
+    "type": "composer-plugin",
+    "authors": [
+        {
+            "name": "Jez Emery",
+            "email": "jez.emery@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.2.0"
+    }
+}
