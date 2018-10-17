@@ -33,6 +33,6 @@
         "roave/security-advisories": "dev-master"
     },
     "scripts": {
-        "post-create-project-cmd": "./vendor/wp-cli/wp-cli/bin/wp core download"
+        "post-create-project-cmd": "./vendor/wp-cli/wp-cli/bin/wp core download --locale=en_GB --skip-content"
     }
 }
