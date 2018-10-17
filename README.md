@@ -1,2 +1,2 @@
-# mimir
-skeleton for wp dev
+# Mímir
+Skeleton for modern Wordpress development
