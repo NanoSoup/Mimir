@@ -14,12 +14,6 @@
     }
   ],
   "minimum-stability": "dev",
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "git@bitbucket.org:strawberrysoup/nemesis.git"
-    }
-  ],
   "autoload": {
     "psr-4": {
       "Mimir\\": "scripts/composer/"
@@ -29,7 +23,7 @@
     "php": ">=7.2.0",
     "ext-zip": "*",
     "symfony/dotenv": "^4.2@dev",
-    "strawberrysoup/nemesis": "dev-master",
+    "nanosoup/nemesis": "dev-master",
     "twig/twig": "2.x-dev",
     "wp-cli/wp-cli": "^2.0@dev",
     "wp-cli/core-command": "^2.0@dev",
