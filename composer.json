@@ -1,25 +1,53 @@
 {
-    "name": "nanosoup/mimir",
-    "license": "Unlicense",
-    "description": "skeleton for wp dev",
-    "type": "composer-plugin",
-    "authors": [
-        {
-            "name": "Jez Emery",
-            "email": "jez@hiohzo.com"
-        },
-        {
-            "name": "Harry Wiseman",
-            "email": "enquiries@harry-wiseman.co.uk"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "php": ">=7.2.0",
-        "symfony/dotenv": "^4.2@dev",
-        "nanosoup/nemesis": "dev-master"
+  "name": "nanosoup/mimir",
+  "license": "Unlicense",
+  "description": "Skeleton for modern Wordpress development",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Jez Emery",
+      "email": "jez@hiohzo.com"
     },
-    "require-dev": {
-      "roave/security-advisories": "dev-master"
+    {
+      "name": "Harry Wiseman",
+      "email": "enquiries@harry-wiseman.co.uk"
     }
+  ],
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:strawberrysoup/nemesis.git"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Mimir\\": "scripts/composer/"
+    }
+  },
+  "require": {
+    "php": ">=7.2.0",
+    "ext-zip": "*",
+    "symfony/dotenv": "^4.2@dev",
+    "strawberrysoup/nemesis": "dev-master",
+    "twig/twig": "2.x-dev",
+    "wp-cli/wp-cli": "^2.0@dev",
+    "wp-cli/core-command": "^2.0@dev",
+    "wp-cli/db-command": "^2.0@dev"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  },
+  "scripts": {
+    "install-wordpress": "wp core download --locale=en_GB --skip-content --force",
+    "capture-creds": "Mimir\\DotEnv::postProjectCreate",
+    "create-wordpress-db": "wp db create || true",
+    "install-wordpress-db": "wp core install --url='' --title='Mimir website' --admin_user='admin' --admin_email='admin@admin.com'",
+    "post-create-project-cmd": [
+      "@install-wordpress",
+      "@capture-creds",
+      "@create-wordpress-db",
+      "@install-wordpress-db"
+    ]
+  }
 }
