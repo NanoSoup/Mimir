@@ -16,7 +16,8 @@
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "Mimir\\": "scripts/composer/"
+      "Mimir\\": "scripts/composer/",
+      "Timber\\": "vendor/timber/timber/lib/"
     }
   },
   "require": {
