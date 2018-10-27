@@ -4,6 +4,13 @@ use Symfony\Component\Dotenv\Dotenv;
 
 require __DIR__.'/vendor/autoload.php';
 
+/**
+ * If we are in DEBUG mode, enable symfony debug component
+ */
+if (filter_var(getenv('WP_DEBUG'), FILTER_VALIDATE_BOOLEAN) === true) {
+    \Symfony\Component\Debug\Debug::enable();
+}
+
 $env = new Dotenv();
 $env->load(__DIR__.'/.env');
 
