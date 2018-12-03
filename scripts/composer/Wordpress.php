@@ -18,7 +18,7 @@ class Wordpress
         $adminUser = $io->ask('Admin username: ');
         $adminEmail = $io->ask('Admin email: ');
 
-        exec("wp core install --url='$siteUrl' --title='$siteName' --admin_user='$adminUser' --admin_email='$adminEmail'");
+        $io->write(system("wp core install --url='$siteUrl' --title='$siteName' --admin_user='$adminUser' --admin_email='$adminEmail'"));
 
     }
 }
