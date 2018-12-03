@@ -14,10 +14,8 @@ if (filter_var(getenv('WP_DEBUG'), FILTER_VALIDATE_BOOLEAN) === true) {
 $env = new Dotenv();
 $env->load(__DIR__.'/.env');
 
-$vars = explode(',', $_ENV['SYMFONY_DOTENV_VARS']);
-
-foreach ($vars as $var) {
-    define($var, $_ENV[$var]);
+foreach (explode(',', $_ENV['SYMFONY_DOTENV_VARS']) as $env_var) {
+    define($env_var, filter_var($_ENV[$env_var], FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) ?? $_ENV[$env_var]);
 }
 
 $table_prefix  = 'wp_';
