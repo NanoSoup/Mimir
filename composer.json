@@ -41,7 +41,7 @@
     "install-wordpress": "wp core download --locale=en_GB --skip-content --force",
     "capture-creds": "Mimir\\DotEnv::postProjectCreate",
     "create-wordpress-db": "wp db create || true",
-    "install-wordpress-db": "wp core install --url='' --title='Mimir website' --admin_user='admin' --admin_email='admin@admin.com'",
+    "install-wordpress-db": "Mimir\\Wordpress::postProjectInstall",
     "post-create-project-cmd": [
       "@install-wordpress",
       "@capture-creds",
