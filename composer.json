@@ -30,13 +30,32 @@
     "wp-cli/wp-cli": "^2.0@dev",
     "wp-cli/core-command": "^2.0@dev",
     "wp-cli/db-command": "^2.0@dev",
-    "timber/timber": "dev-master"
+    "timber/timber": "dev-master",
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.7"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",
     "symfony/var-dumper": "^4.2@dev",
     "symfony/debug": "^4.2@dev"
   },
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.7.8",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
+        },
+        "require": {
+          "philippbaschke/acf-pro-installer": "^1.0",
+          "composer/installers": "^1.0"
+        }
+      }
+    }
+  ],
   "scripts": {
     "install-wordpress": "wp core download --locale=en_GB --skip-content --force",
     "capture-creds": "Mimir\\DotEnv::postProjectCreate",
@@ -51,7 +70,9 @@
   },
   "extra": {
     "installer-paths": {
-      "wp-content/themes/{$name}": ["nanosoup/erebus"]
+      "wp-content/themes/{$name}": [
+        "nanosoup/erebus"
+      ]
     }
   }
 }
