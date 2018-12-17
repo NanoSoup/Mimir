@@ -13,16 +13,16 @@ class DotEnv
 
         $io = $event->getIO();
         $env = new \Symfony\Component\Dotenv\Dotenv();
-        $env->load($vendorDir.'/../.env.dist');
+        $env->load($vendorDir . '/../.env.dist');
         $vars = explode(',', $_ENV['SYMFONY_DOTENV_VARS']);
 
-        $file_contents='';
+        $file_contents = '';
 
         /**
          * Read vars from .env.dist file
          */
         foreach ($vars as $name) {
-            $file_contents .= $name."='".$io->ask($name.' ('.$_ENV[$name].'): ', $_ENV[$name])."'".PHP_EOL;
+            $file_contents .= $name . "='" . $io->ask($name . ' (' . $_ENV[$name] . '): ', $_ENV[$name]) . "'" . PHP_EOL;
         }
 
         /**
@@ -39,13 +39,13 @@ class DotEnv
         preg_match_all($re, $wp_salts, $matches, PREG_PATTERN_ORDER, 0);
 
         for ($i = 0; $i < count($matches[1]); $i++) {
-            $file_contents .= $matches[1][$i]."='".$matches[2][$i]."'".PHP_EOL;
+            $file_contents .= $matches[1][$i] . "='" . $matches[2][$i] . "'" . PHP_EOL;
         }
 
         /**
          * Write .env file
          */
-        file_put_contents($vendorDir.'/../.env', $file_contents);
+        file_put_contents($vendorDir . '/../.env', $file_contents, FILE_APPEND);
 
     }
 }
