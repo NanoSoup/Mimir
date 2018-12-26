@@ -61,7 +61,10 @@
     "capture-creds": "Mimir\\DotEnv::postProjectCreate",
     "create-wordpress-db": "wp db create || true",
     "install-wordpress-db": "Mimir\\Wordpress::postProjectInstall",
-    "enable-plugins": ["wp plugin activate advanced-custom-fields-pro"],
+    "enable-plugins": [
+      "wp plugin activate advanced-custom-fields-pro",
+      "wp theme activate erebus"
+    ],
     "post-create-project-cmd": [
       "@install-wordpress",
       "@capture-creds",
