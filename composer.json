@@ -61,14 +61,12 @@
     "capture-creds": "Mimir\\DotEnv::postProjectCreate",
     "create-wordpress-db": "wp db create || true",
     "install-wordpress-db": "Mimir\\Wordpress::postProjectInstall",
-    "pre-install-cmd": "@setup-for-acf",
     "post-create-project-cmd": [
       "@install-wordpress",
       "@capture-creds",
       "@create-wordpress-db",
       "@install-wordpress-db"
-    ],
-    "setup-for-acf" : "Mimir\\AdvancedCustomFields::preInstallCmd"
+    ]
   },
   "extra": {
     "installer-paths": {
