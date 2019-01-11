@@ -6,7 +6,7 @@
   "authors": [
     {
       "name": "Jez Emery",
-      "email": "jez@hiohzo.com"
+      "email": "github@hiohzo.com"
     },
     {
       "name": "Harry Wiseman",
@@ -21,15 +21,13 @@
     }
   },
   "require": {
-    "php": ">=7.2.0",
+    "php": ">=7.3.0",
     "ext-zip": "*",
     "symfony/dotenv": "^4.2@dev",
     "nanosoup/nemesis": "dev-master",
     "nanosoup/erebus": "dev-master",
     "twig/twig": "2.x-dev",
-    "wp-cli/wp-cli": "^2.0@dev",
-    "wp-cli/core-command": "^2.0@dev",
-    "wp-cli/db-command": "^2.0@dev",
+    "wp-cli/wp-cli-bundle": "^2.1@dev",
     "timber/timber": "dev-master",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.7"
   },
