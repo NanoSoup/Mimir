@@ -29,7 +29,7 @@
     "twig/twig": "2.x-dev",
     "wp-cli/wp-cli-bundle": "^2.1@dev",
     "timber/timber": "dev-master",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^5.7"
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.0-beta3"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",
@@ -41,14 +41,14 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.7.8",
+        "version": "5.8.0-beta3",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
           "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
         },
         "require": {
-          "philippbaschke/acf-pro-installer": "^1.0",
+          "jezemery/acf-pro-installer": "^1.0",
           "composer/installers": "^1.0"
         }
       }
