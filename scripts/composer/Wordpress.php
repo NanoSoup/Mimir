@@ -18,9 +18,9 @@ class Wordpress
         $adminUser = $io->ask('Admin username: ');
         $adminEmail = $io->ask('Admin email: ');
 
-        $io->write(system("wp core install --url='$siteUrl' --title='$siteName' --admin_user='$adminUser' --admin_email='$adminEmail'"));
-        $io->write(system("wp plugin activate --path='$vendorDir/../'"));
-        $io->write(system("wp theme activate erebus --path='$vendorDir/../'"));
+        system("wp core install --url='$siteUrl' --title='$siteName' --admin_user='$adminUser' --admin_email='$adminEmail'");
+        system("wp plugin activate advanced-custom-fields-pro --path='$vendorDir/../'");
+        system("wp theme activate erebus --path='$vendorDir/../'");
 
     }
 }
