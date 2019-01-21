@@ -32,7 +32,10 @@
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.0-beta3",
     "wpackagist-plugin/wp-mail-smtp": "^1",
     "deliciousbrains-plugin/wp-offload-media": "*",
-    "deliciousbrains-plugin/wp-offload-media-assets-pull": "*"
+    "deliciousbrains-plugin/wp-offload-media-assets-pull": "*",
+    "wpackagist-plugin/wordpress-seo": "*",
+    "wpackagist-plugin/redis-cache": "*",
+    "wpackagist-plugin/duracelltomi-google-tag-manager": "*"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",
