@@ -29,7 +29,10 @@
     "twig/twig": "2.x-dev",
     "wp-cli/wp-cli-bundle": "^2.1@dev",
     "timber/timber": "dev-master",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.0-beta3"
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.0-beta3",
+    "wpackagist-plugin/wp-mail-smtp": "^1",
+    "deliciousbrains-plugin/wp-offload-media": "*",
+    "deliciousbrains-plugin/wp-offload-media-assets-pull": "*"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",
@@ -52,6 +55,14 @@
           "composer/installers": "^1.0"
         }
       }
+    },
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://composer.deliciousbrains.com/72A0345315D83776A594954B1808D3C6"
     }
   ],
   "scripts": {
