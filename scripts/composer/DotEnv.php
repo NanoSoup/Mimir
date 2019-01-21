@@ -4,8 +4,15 @@ namespace Mimir;
 
 use Composer\Script\Event;
 
+/**
+ * Class DotEnv
+ * @package Mimir
+ */
 class DotEnv
 {
+    /**
+     * @param Event $event
+     */
     public static function postProjectCreate(Event $event)
     {
         $vendorDir = $event->getComposer()->getConfig()->get('vendor-dir');

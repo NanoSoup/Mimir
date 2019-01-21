@@ -19,6 +19,12 @@ foreach (explode(',', $_ENV['SYMFONY_DOTENV_VARS']) as $env_var) {
     define($env_var, filter_var($_ENV[$env_var], FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) ?? $_ENV[$env_var]);
 }
 
+define('AS3CF_SETTINGS', serialize(array(
+    'provider' => 'aws',
+    'access-key-id' => getenv('S3_AWS_ID'),
+    'secret-access-key' => getenv('S3_AWS_SECRET'),
+)));
+
 $table_prefix = 'wp_';
 
 /* That's all, stop editing! Happy blogging. */
