@@ -22,5 +22,6 @@ class Wordpress
         system("wp plugin activate --all --path='$vendorDir/../'");
         system("wp theme activate erebus --path='$vendorDir/../'");
 
+        system("mv wp-content/themes/erebus/ wp-content/themes/" . strtolower(str_replace('', '-', $siteName));
     }
 }
