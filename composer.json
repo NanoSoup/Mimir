@@ -44,7 +44,7 @@
   },
   "config": {
     "preferred-install": {
-      "nanosoup/erebus": "source"
+      "nanosoup/erebus": "dist"
     }
   },
   "repositories": [
