@@ -42,6 +42,11 @@
     "symfony/var-dumper": "^4.2@dev",
     "symfony/debug": "^4.2@dev"
   },
+  "config": {
+    "preferred-install": {
+      "nanosoup/erebus": "source"
+    }
+  }
   "repositories": [
     {
       "type": "package",
