@@ -46,7 +46,7 @@
     "preferred-install": {
       "nanosoup/erebus": "source"
     }
-  }
+  },
   "repositories": [
     {
       "type": "package",
