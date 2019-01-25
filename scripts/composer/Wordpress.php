@@ -29,23 +29,18 @@ class Wordpress
         $gitRepo = $io->ask('Git repo URL: ');
         $namespace = $io->ask('Choose site namespace (e.g. SiteName): ');
 
-        $theme = strtolower(str_replace('', '-', $siteName));
-
         // Wordpress installation
         system("wp core install --url='$siteUrl' --title='$siteName' --admin_user='$adminUser' --admin_email='$adminEmail'");
         system("wp plugin activate --all --path='$vendorDir/../'");
         system("wp theme activate erebus --path='$vendorDir/../'");
 
         // Rename the theme to the site name
-        system("mv wp-content/themes/erebus/ wp-content/themes/" . $theme);
+        system("mv wp-content/themes/erebus/ wp-content/themes/" . strtolower(str_replace('', '-', $siteName)));
 
         // Add the users git repo to the project
         system('git init && git remote add origin ' . $gitRepo);
 
-        // Don't think we need this but just in case
-        system('git pull');
-
         // Set up namespaces to make sense within the project scope
-        file_put_contents("wp-content/themes/" . $theme . "/composer.json", str_replace('{{ SITE_NAMESPACE }}', $namespace, file_get_contents("wp-content/themes/" . $theme . "/composer.json")));
+        file_put_contents("wp-content/themes/" . strtolower(str_replace('', '-', $siteName)) . "/composer.json", str_replace('{{ SITE_NAMESPACE }}', $namespace, file_get_contents("wp-content/themes/" . strtolower(str_replace('', '-', $siteName)) . "/composer.json")));
     }
 }
