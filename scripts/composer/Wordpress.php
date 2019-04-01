@@ -35,12 +35,12 @@ class Wordpress
         system("wp theme activate erebus --path='$vendorDir/../'");
 
         // Rename the theme to the site name
-        system("mv wp-content/themes/erebus/ wp-content/themes/" . strtolower(str_replace('', '-', $siteName)));
+        system("mv wp-content/themes/erebus/ wp-content/themes/" . strtolower(str_replace(' ', '-', $siteName)));
 
         // Add the users git repo to the project
         system('git init && git remote add origin ' . $gitRepo);
 
         // Set up namespaces to make sense within the project scope
-        file_put_contents("wp-content/themes/" . strtolower(str_replace('', '-', $siteName)) . "/composer.json", str_replace('{{ SITE_NAMESPACE }}', $namespace, file_get_contents("wp-content/themes/" . strtolower(str_replace('', '-', $siteName)) . "/composer.json")));
+        file_put_contents("wp-content/themes/" . strtolower(str_replace(' ', '-', $siteName)) . "/composer.json", str_replace('{{ SITE_NAMESPACE }}', $namespace, file_get_contents("wp-content/themes/" . strtolower(str_replace('', '-', $siteName)) . "/composer.json")));
     }
 }
