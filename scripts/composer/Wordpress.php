@@ -41,6 +41,6 @@ class Wordpress
         system('git init && git remote add origin ' . $gitRepo);
 
         // Set up namespaces to make sense within the project scope
-        file_put_contents("wp-content/themes/" . strtolower(str_replace(' ', '-', $siteName)) . "/composer.json", str_replace('{{ SITE_NAMESPACE }}', $namespace, file_get_contents("wp-content/themes/" . strtolower(str_replace('', '-', $siteName)) . "/composer.json")));
+        file_put_contents("wp-content/themes/" . strtolower(str_replace(' ', '-', $siteName)) . "/composer.json", str_replace('{{ SITE_NAMESPACE }}', $namespace, file_get_contents("wp-content/themes/" . strtolower(str_replace(' ', '-', $siteName)) . "/composer.json")));
     }
 }
