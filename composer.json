@@ -29,7 +29,7 @@
     "twig/twig": "^2.7.1",
     "wp-cli/wp-cli-bundle": "^2.1@dev",
     "timber/timber": "dev-master",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.0-beta3",
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.1",
     "wpackagist-plugin/wp-mail-smtp": "^1",
     "deliciousbrains-plugin/wp-offload-media": "*",
     "deliciousbrains-plugin/wp-offload-media-assets-pull": "*",
@@ -52,7 +52,7 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.8.0-beta3",
+        "version": "5.8.1",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
