@@ -25,6 +25,7 @@
     "ext-zip": "*",
     "symfony/dotenv": "^4.2@dev",
     "nanosoup/nemesis": "dev-master",
+    "nanosoup/zeus": "dev-master",
     "nanosoup/erebus": "dev-master",
     "twig/twig": "^2.7.1",
     "wp-cli/wp-cli-bundle": "^2.1@dev",
