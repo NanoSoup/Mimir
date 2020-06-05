@@ -27,7 +27,7 @@
     "nanosoup/nemesis": "dev-master",
     "nanosoup/zeus": "dev-master",
     "nanosoup/erebus": "dev-master",
-    "twig/twig": "^2.7.1",
+    "twig/twig": "^2.x-dev",
     "wp-cli/wp-cli-bundle": "^2.1@dev",
     "timber/timber": "dev-master",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.1",
