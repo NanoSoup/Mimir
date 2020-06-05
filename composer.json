@@ -41,7 +41,8 @@
   "require-dev": {
     "roave/security-advisories": "dev-master",
     "symfony/var-dumper": "^4.2@dev",
-    "symfony/debug": "^4.2@dev"
+    "symfony/debug": "^4.2@dev",
+    "hellonico/timber-dump-extension": "dev-master"
   },
   "config": {
     "preferred-install": {
