@@ -47,15 +47,15 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.8.0-beta3",
+        "version": "5.8.12",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
           "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
         },
         "require": {
-          "jezemery/acf-pro-installer": "^1.0",
-          "composer/installers": "^1.0"
+          "jezemery/acf-pro-installer": "^2.0.1",
+          "composer/installers": "^1.9"
         }
       }
     },
