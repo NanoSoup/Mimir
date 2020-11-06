@@ -23,7 +23,7 @@
   "require": {
     "php": ">=7.2.0",
     "ext-zip": "*",
-    "symfony/dotenv": "^4.2@dev",
+    "symfony/dotenv": "^5.1.5",
     "nanosoup/nemesis": "dev-master",
     "nanosoup/zeus": "dev-master",
     "nanosoup/erebus": "dev-master",
