@@ -5,15 +5,15 @@ use Symfony\Component\Dotenv\Dotenv;
 
 require __DIR__ . '/vendor/autoload.php';
 
+$env = new Dotenv();
+$env->load(__DIR__ . '/.env');
+
 /**
  * If we are in DEBUG mode, enable symfony debug component
  */
 if (filter_var(getenv('WP_DEBUG'), FILTER_VALIDATE_BOOLEAN) === true) {
     Debug::enable();
 }
-
-$env = new Dotenv();
-$env->load(__DIR__ . '/.env');
 
 foreach (explode(',', $_ENV['SYMFONY_DOTENV_VARS']) as $env_var) {
     define($env_var, filter_var($_ENV[$env_var], FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE) ?? $_ENV[$env_var]);
