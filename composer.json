@@ -31,7 +31,7 @@
     "wp-cli/wp-cli-bundle": "^2.1@dev",
     "timber/timber": "dev-master",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.1",
-    "wpackagist-plugin/wp-mail-smtp": "^1",
+    "wpackagist-plugin/wp-mail-smtp": "^2",
     "deliciousbrains-plugin/wp-offload-media": "*",
     "deliciousbrains-plugin/wp-offload-media-assets-pull": "*",
     "wpackagist-plugin/wordpress-seo": "*",
